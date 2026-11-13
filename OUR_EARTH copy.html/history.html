@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History & Issues | Our Earth Day</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(rgba(27, 94, 32, 0.35), rgba(46, 125, 50, 0.35)), url('history.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #2C3E50; 
+        }
+        header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            background-color: #FFFFFF; 
+            border-bottom: 3px solid #81C784; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 12px 25px; 
+            box-sizing: border-box; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1); 
+        }
+        .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; color: #2E7D32; text-decoration: none; }
+        nav { display: flex; gap: 6px; flex-wrap: wrap; }
+        nav a { color: #2E7D32; text-decoration: none; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 20px; background-color: #E8F5E9; border: 1px solid #A5D6A7; transition: all 0.25s ease; }
+        nav a:hover, nav a.active { background-color: #2E7D32; color: #ffffff; border-color: #2E7D32; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.25); }
+        .container { max-width: 1000px; margin: 0 auto; padding: 120px 20px 60px 20px; }
+        h1, h2 { color: #1B5E20; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .card { 
+            background-color: rgba(255, 255, 255, 0.95); 
+            border: 2px solid #C8E6C9; 
+            border-radius: 16px; 
+            padding: 30px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+        }
+        .card h2 { border-bottom: 2px solid #A5D6A7; padding-bottom: 10px; margin-top: 0; }
+        
+        /* History Layout Grid matching slide */
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .history-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .history-img-container {
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .history-img-container img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid #C8E6C9;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Lively & Cute Video Card Styles */
+        .video-card {
+            background: linear-gradient(135deg, rgba(241, 248, 233, 0.96), rgba(220, 237, 200, 0.96));
+            border: 3px dashed #66BB6A;
+            border-radius: 24px;
+            padding: 28px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(46, 125, 50, 0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(46, 125, 50, 0.25);
+        }
+
+        .video-badge {
+            display: inline-block;
+            background-color: #2E7D32;
+            color: #FFFFFF;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            box-shadow: 0 3px 8px rgba(46, 125, 50, 0.25);
+        }
+
+        .video-card h2 {
+            color: #1B5E20;
+            border: none;
+            margin: 6px 0 8px 0;
+            padding: 0;
+            font-size: 22px;
+        }
+
+        .video-card p {
+            color: #388E3C;
+            font-size: 15px;
+            margin: 0 0 18px 0;
+            font-weight: 500;
+        }
+
+        .video-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 4px solid #FFFFFF;
+            box-shadow: 0 8px 20px rgba(27, 94, 32, 0.2);
+            background-color: #1B5E20;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+            border-radius: 14px;
+        }
+
+        ul { line-height: 1.8; color: #37474F; font-size: 15px; padding-left: 20px; margin: 0; }
+        ul li { margin-bottom: 12px; }
+        strong { color: #1B5E20; }
+
+        @media (max-width: 768px) { 
+            .container { padding: 110px 15px 40px 15px; } 
+            .card, .video-card { padding: 20px; } 
+            .history-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">OUR EARTH DAY</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="history.html" class="active">History & Issues</a>
+            <a href="practices.html">Practices & Goals</a>
+            <a href="events.html">Events & Activists</a>
+            <a href="diy.html">DIY Projects</a>
+            <a href="success.html">Success Stories</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Card 1: History of Earth Day -->
+        <div class="card">
+            <h2>History of Earth Day</h2>
+            
+            <div class="history-grid">
+                <!-- Left Column: Timeline points -->
+                <div class="history-column">
+                    <ul>
+                        <li><strong>1970: The First Earth Day</strong> — Earth Day was founded on April 22, 1970, by U.S. Senator Gaylord Nelson and activist Denis Hayes to raise awareness about environmental pollution.</li>
+                        <li><strong>1990: Earth Day Goes Global</strong> — Denis Hayes helped organize Earth Day internationally, mobilizing 200 million people across 141 countries, which supercharged global recycling efforts and led up to the 1992 UN Earth Summit in Rio de Janeiro.</li>
+                        <li><strong>2000s: The Power of Digital Media</strong> — The movement expanded to focus heavily on clean energy, digital mobilization, and climate change.</li>
+                    </ul>
+                </div>
+
+                <!-- Right Column: Additional points & Timeline Image -->
+                <div class="history-column">
+                    <ul>
+                        <li><strong>A Catalyst for Global Treaties:</strong> Decades later, the momentum of Earth Day became so universally recognized that the United Nations selected Earth Day 2016 as the momentous opening day for world leaders to officially sign the Paris Agreement on Climate Change.</li>
+                        <li><strong>Today:</strong> Coordinated by EARTHDAY.ORG, Earth Day is celebrated annually by over 1 billion people in more than 193 countries, making it one of the largest secular civic observances in the world.</li>
+                    </ul>
+
+                    <div class="history-img-container">
+                        <img src="history2.jpeg" alt="Earth Day Timeline Infographic">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lively & Cute Video Card -->
+        <div class="video-card">
+            <span class="video-badge">🌿 Nature Spotlight 🌱</span>
+            <h2>✨ Wonders of Our Green Planet ✨</h2>
+            <p>Take a peaceful breather and enjoy the beauty of our forests—this is what we are working together to protect! 🌍💚</p>
+            <div class="video-wrapper">
+                <video controls autoplay muted loop playsinline>
+                    <source src="forestvideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Card 2: Environmental Issues -->
+        <div class="card">
+            <h2>Environmental Issues</h2>
+            <ul>
+                <li><strong>Global Warming & Climate Change:</strong> Rising global temperatures and perception of extreme weather events and wildfires.</li>
+                <li><strong>Deforestation:</strong> Loss of critical forest cover and biodiversity.</li>
+                <li><strong>Air Pollution:</strong> Industrial emissions and urban smog affecting air quality.</li>
+                <li><strong>Food Waste & Water Security:</strong> Resource misallocation and scarcity.</li>
+                <li><strong>Melting Ice Caps & Rising Sea Levels:</strong> Threats to coastal ecosystems and global weather stability.</li>
+                <li><strong>Traditional Agriculture:</strong> Resource-heavy farming strains.</li>
+                <li><strong>Fashion and Textile Waste:</strong> Fast fashion pollution and discarded garments.</li>
+                <li><strong>Artificial Intelligence & Tech Footprint:</strong> Energy demands of data centers and electronic waste.</li>
+                <li><strong>Mining & Extraction:</strong> Impacts from resource sourcing like cobalt mining.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Earth Day | Hub</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #F4F8F3; color: #2C3E50; }
+        
+        header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            background-color: #FFFFFF; 
+            border-bottom: 3px solid #81C784; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 12px 25px; 
+            box-sizing: border-box; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1); 
+        }
+        
+        .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; color: #2E7D32; text-decoration: none; }
+        
+        nav { display: flex; gap: 6px; flex-wrap: wrap; }
+        nav a { color: #2E7D32; text-decoration: none; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 20px; background-color: #E8F5E9; border: 1px solid #A5D6A7; transition: all 0.25s ease; }
+        nav a:hover, nav a.active { background-color: #2E7D32; color: #ffffff; border-color: #2E7D32; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.25); }
+        
+        /* HOME SECTION WITH BACKGROUND IMAGE */
+        #home { 
+            padding: 120px 40px 80px 40px; 
+            min-height: 100vh; 
+            box-sizing: border-box;
+            background: linear-gradient(rgba(27, 94, 32, 0.75), rgba(46, 125, 50, 0.75)), url('background.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-title { font-size: 52px; margin: 0 0 10px 0; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        
+        .hero-subtitle { font-size: 16px; color: #DCEDC8; margin-bottom: 25px; line-height: 1.6; font-weight: 600; text-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+        .hero-subtitle span { display: block; font-size: 13px; color: #F1F8E9; font-weight: normal; margin-top: 4px; }
+        
+        .content-box { max-width: 850px; background-color: rgba(255, 255, 255, 0.95); border: 2px solid #C8E6C9; border-radius: 16px; padding: 35px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); margin-top: 20px; }
+        .content-box h2 { color: #1B5E20; margin-top: 0; border-bottom: 2px solid #A5D6A7; padding-bottom: 10px; }
+        .content-box p { line-height: 1.8; font-size: 16px; color: #37474F; }
+        
+        /* Lively Audio Player Box Styling */
+        .audio-box {
+            max-width: 850px;
+            background: linear-gradient(135deg, rgba(241, 248, 233, 0.96), rgba(220, 237, 200, 0.96));
+            border: 3px dashed #66BB6A;
+            border-radius: 16px;
+            padding: 20px 30px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 8px 20px rgba(46, 125, 50, 0.2);
+        }
+        .audio-info { display: flex; align-items: center; gap: 14px; }
+        .music-icon { font-size: 28px; animation: pulseGlow 2s infinite ease-in-out; }
+        @keyframes pulseGlow { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+        .audio-text h3 { margin: 0 0 2px 0; color: #1B5E20; font-size: 16px; }
+        .audio-text p { margin: 0; color: #388E3C; font-size: 13px; font-weight: 500; }
+        .audio-box audio { width: 280px; height: 38px; border-radius: 20px; outline: none; }
+
+        .pages-grid { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; margin-top: 35px; }
+        .page-card { background-color: rgba(255, 255, 255, 0.95); border: 2px solid #A5D6A7; border-radius: 12px; padding: 20px; width: 200px; text-align: center; text-decoration: none; color: #2C3E50; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .page-card:hover { border-color: #2E7D32; transform: translateY(-6px); background-color: #E8F5E9; box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3); }
+        .page-card h3 { color: #2E7D32; margin-bottom: 8px; }
+        .page-card p { font-size: 13px; color: #558B2F; margin: 0; }
+        
+        @media (max-width: 768px) { 
+            .hero-title { font-size: 36px; } 
+            .content-box, .audio-box { padding: 20px; } 
+            .audio-box { flex-direction: column; text-align: center; }
+            .audio-info { flex-direction: column; }
+            .audio-box audio { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">OUR EARTH DAY</a>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="history.html">History & Issues</a>
+            <a href="practices.html">Practices & Goals</a>
+            <a href="events.html">Events & Activists</a>
+            <a href="diy.html">DIY Projects</a>
+            <a href="success.html">Success Stories</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1 class="hero-title">Our Earth Day</h1>
+        <div class="hero-subtitle">
+            TEAM MEMBERS:
+            <span>1. Alesha Maisarah Binti Abdul Rahman (5502610151)[cite: 5]</span>
+            <span>2. Nur Haziqah Zahraa Binti Hassan (5502610108)[cite: 5]</span>
+            <span>3. Nurin Izati Binti Sani (5502610127)[cite: 5]</span>
+            <span>4. Tuan Alya Adreanna Binti Tuan Mustakim (5502610102)[cite: 5]</span>
+        </div>
+        
+        <div class="content-box">
+            <h2>About The Hub</h2>
+            <p>Welcome to <strong>Our Earth Day</strong>, an interactive resource hub dedicated to raising environmental awareness, encouraging sustainable living, and showcasing action on Earth Day and beyond.</p>
+            <p>Explore our pages using the navigation menu above or click through the topic hubs below to discover history, environmental issues, practical tips, DIY upcycling guides, and global success stories!</p>
+        </div>
+
+        <!-- Lively Nature Audio Player Box -->
+        <div class="audio-box">
+            <div class="audio-info">
+                <div class="music-icon">🎶</div>
+                <div class="audio-text">
+                    <h3>Nature Sounds & Earth Vibes</h3>
+                    <p>Press play to enjoy soothing forest audio while browsing! 🍃</p>
+                </div>
+            </div>
+            <audio controls loop>
+                <source src="forestsound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="pages-grid">
+            <a href="history.html" class="page-card">
+                <h3>History</h3>
+                <p>Learn how Earth Day evolved from 1970 to today.</p>
+            </a>
+            <a href="practices.html" class="page-card">
+                <h3>Practices</h3>
+                <p>Conserving energy, reducing waste, and future goals.</p>
+            </a>
+            <a href="events.html" class="page-card">
+                <h3>Events</h3>
+                <p>Global cleanups, student projects, & activists.</p>
+            </a>
+            <a href="diy.html" class="page-card">
+                <h3>DIY Hub</h3>
+                <p>Upcycling, zero-waste, and eco-crafting guides.</p>
+            </a>
+            <a href="success.html" class="page-card">
+                <h3>Success</h3>
+                <p>Real-world impact in Borneo, coral reefs, & policy.</p>
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>

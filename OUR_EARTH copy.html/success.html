@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories & Contact | Our Earth Day</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(rgba(27, 94, 32, 0.35), rgba(46, 125, 50, 0.35)), url('success.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #2C3E50; 
+        }
+        header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            background-color: #FFFFFF; 
+            border-bottom: 3px solid #81C784; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 12px 25px; 
+            box-sizing: border-box; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.1); 
+        }
+        .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; color: #2E7D32; text-decoration: none; }
+        nav { display: flex; gap: 6px; flex-wrap: wrap; }
+        nav a { color: #2E7D32; text-decoration: none; font-size: 13px; font-weight: 600; padding: 8px 12px; border-radius: 20px; background-color: #E8F5E9; border: 1px solid #A5D6A7; transition: all 0.25s ease; }
+        nav a:hover, nav a.active { background-color: #2E7D32; color: #ffffff; border-color: #2E7D32; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.25); }
+        .container { max-width: 900px; margin: 0 auto; padding: 120px 20px 60px 20px; }
+        
+        h1 { color: #1B5E20; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; }
+
+        .card { 
+            background-color: rgba(255, 255, 255, 0.95); 
+            border: 2px solid #C8E6C9; 
+            border-radius: 16px; 
+            padding: 30px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+        }
+        
+        .card h2 { 
+            color: #1B5E20; 
+            border-bottom: 2px solid #A5D6A7; 
+            padding-bottom: 10px; 
+            margin-top: 0; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
+
+        h3 { color: #388E3C; margin-top: 20px; }
+        ul, p { line-height: 1.8; color: #37474F; font-size: 15px; }
+        ul { padding-left: 20px; }
+        ul li { margin-bottom: 10px; }
+        a { color: #2E7D32; word-break: break-all; }
+        strong { color: #1B5E20; }
+
+        /* Contact Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #37474F;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #CFD8DC;
+            border-radius: 8px;
+            background-color: #F8F9FA;
+            font-size: 15px;
+            color: #2C3E50;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #2E7D32;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #2E7D32;
+            color: #FFFFFF;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.25);
+        }
+
+        .submit-btn:hover {
+            background-color: #1B5E20;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.99);
+        }
+
+        #form-success-msg {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2E7D32;
+            text-align: center;
+        }
+
+        .reference-box {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed #C8E6C9;
+        }
+
+        @media (max-width: 768px) { .container { padding: 110px 15px 40px 15px; } .card { padding: 20px; } }
+    </style>
+</head>
+<body>
+
+    <header id="header">
+        <a href="index.html" class="logo">OUR EARTH DAY</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="history.html">History & Issues</a>
+            <a href="practices.html">Practices & Goals</a>
+            <a href="events.html">Events & Activists</a>
+            <a href="diy.html">DIY Projects</a>
+            <a href="success.html" class="active">Success Stories</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Success Stories & Impact</h1>
+
+        <div class="card">
+            <h2>Success Stories #1</h2>
+            <h3>Reforestation & Indigenous Health: Health in Harmony (Borneo)</h3>
+            <p><strong>The Core Problem:</strong> Tropical rainforest destruction is deeply tied to poverty and healthcare access. When families cannot afford medical emergencies, they often turn to illegal logging to pay for healthcare[cite: 2].</p>
+            <p><strong>The Innovative Solution:</strong> Health In Harmony uses a planetary health approach centered on radical listening—asking Indigenous peoples and forest-guarding communities what they need to protect their environment. Crucially, the model is driven by local women[cite: 2].</p>
+            <p><strong>Measurable Results (Indonesian Borneo Pilot):</strong></p>
+            <ul>
+                <li>90% drop in households participating in illegal logging[cite: 2].</li>
+                <li>67% decrease in infant mortality[cite: 2].</li>
+                <li>Stabilization of primary forest loss alongside 21,000 hectares of secondary forest regrowth[cite: 2].</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Success Stories #2</h2>
+            <h3>Coral Restoration at Summer Bay Resort & Coralku</h3>
+            <p><strong>The Core Challenge:</strong> Vital coral reefs around Lang Tengah Island face severe threats from environmental degradation, heavy sedimentation, and storm damage[cite: 2].</p>
+            <p><strong>The Innovative Solution:</strong> Summer Bay Resort partnered with non-profit marine conservation organization Coralku using durable, low-cost metal frames as artificial nurseries to rescue broken corals[cite: 2].</p>
+            <p><strong>Key Milestones & Impact:</strong> Deployment plan aiming for at least 100 coral frames carrying roughly 5,000 pieces of broken coral, leading to natural spawning of 8 different coral species[cite: 2].</p>
+        </div>
+
+        <div class="card">
+            <h2>Success Stories #3</h2>
+            <h3>Deforestation Control: The MSPO & NDPE Policy</h3>
+            <p><strong>The Core Context:</strong> Balancing rapid national economic development with rainforest preservation in resource-rich nations like Malaysia[cite: 2].</p>
+            <p><strong>Key Findings:</strong> Slowing plantation expansion for commodities like oil palm and rubber, coupled with zero-deforestation supply chains and stronger policy frameworks safeguarding primary forest cover[cite: 2].</p>
+        </div>
+
+        <!-- Contact & Project Inquiries Card with Form -->
+        <div class="card">
+            <h2>Contact & Project Inquiries</h2>
+            <p style="margin-bottom: 20px; color: #555;">Have questions about our Earth Day project or want to collaborate? Send us a message below!</p>
+            
+            <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                    <label class="form-label">Your Name</label>
+                    <input type="text" class="form-input" id="visitor-name" placeholder="Alex Rivers" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" id="visitor-email" placeholder="alex@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-textarea" id="visitor-msg" placeholder="Inquiry regarding Earth Day events..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div id="form-success-msg"></div>
+            </form>
+
+            <div class="reference-box">
+                <p><strong>Team Contact Info:</strong><br>
+                Nur Haziqah Zahraa[cite: 2]<br>
+                Phone: +60 13-794-8701[cite: 2] | Email: haziqah.hassan09@student.edu.my[cite: 2]</p>
+
+                <p><strong>Reference Links:</strong></p>
+                <ul>
+                    <li>Yayasan Hijau Malaysia: <a href="https://www.yayasanhijau.org.my/" target="_blank">https://www.yayasanhijau.org.my/</a>[cite: 2]</li>
+                    <li>WWF Malaysia: <a href="https://www.wwf.org.my/about.wwf/who_we_are/" target="_blank">https://www.wwf.org.my/about.wwf/who_we_are/</a>[cite: 2]</li>
+                    <li>NASA Earth Observatory: <a href="https://science.nasa.gov/earth/earthobservatory landslide-and-avalanche-debris-litter-hubbard-glacier/" target="_blank">NASA Earth Observatory</a>[cite: 2]</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            let name = document.getElementById("visitor-name").value;
+            let successDiv = document.getElementById("form-success-msg");
+            successDiv.innerHTML = `🌿 Thank you, ${name}! Your message has been sent successfully. We'll get back to you soon!`;
+            document.getElementById("contact-form").reset();
+        }
+    </script>
+
+</body>
+</html>
